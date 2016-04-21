@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b2300936-3622-43a7-85d8-ab901f1c3282" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TC001_CreateAssetWithRequiredFields" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="63a86c44-5bb0-410b-953e-d20acfc42c98fileName">TC001_CreateAssetWithRequiredFields</con:setting><con:setting id="b2300936-3622-43a7-85d8-ab901f1c3282fileName">TC001_CreateAssetWithRequiredFields</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="Create - CreateAsset" id="fc911707-171f-415a-a072-e61d30d2ccd4"><con:settings/><con:config service="http://10.110.2.121" resourcePath="/WK.FAM.API/api/Assets/Create" methodName="Create" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create - CreateAsset" id="b9d829bd-17c3-4046-85f2-08632b30a3e6" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.110.2.121</con:endpoint><con:request>[{"Assets": [{
+   "entity": "Entity A",
+   "assetID": "EntA001",
+   "description": "PURCHASE LAND",
+   "dateAcquired": "2/2/2015",
+   "originalCost": "60,000.00",
+   "assetType": "Agriculture equipment"
+}]}]</con:request><con:originalUri>http://10.110.2.121/WK.FAM.API/api/Assets/Create</con:originalUri><con:assertion type="XPath Match" id="fa672b7e-8f2d-43fd-bfaa-8c699445b3b5" name="Success Message"><con:configuration><path>declare namespace ns1='http://10.110.2.121/WK.FAM.API/api/Assets/Create';
+//ns1:Response[1]/ns1:Message[1]</path><content>Asset(s) created successfully</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry/></con:parameterOrder></con:restRequest></con:config></con:testStep><con:setupScript>
+import java.text.SimpleDateFormat
+def date = new Date()
+sdf = new SimpleDateFormat("MMddyyyyhhmmss")
+log.info sdf.format(date)
+
+testRunner.testCase.setPropertyValue( "AssetID", sdf.format(date) )
+
+def test1= new SimpleDateFormat("MMddyyyyhhmmss").format(new Date())
+
+
+log.info test1
+
+</con:setupScript><con:properties><con:property><con:name>AssetID</con:name><con:value>04182016073113</con:value></con:property></con:properties><con:reportParameters/></con:testCase>

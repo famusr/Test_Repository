@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c0d061cd-71e3-4a08-accb-fd6e53a3ef7d" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TC002_Create10AssetsWithMultipleEntities" searchProperties="true" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="488773d5-0ef2-47a2-aca5-36e0809bb528fileName">TC002_Create10AssetsWithMultipleEntities</con:setting><con:setting id="c0d061cd-71e3-4a08-accb-fd6e53a3ef7dfileName">TC002_Create10AssetsWithMultipleEntities</con:setting></con:settings><con:testStep type="restrequest" name="Create - CreateAsset" id="21a4a719-8e43-4b76-adcf-1d9853b52ce9"><con:settings/><con:config service="http://10.110.2.121" resourcePath="/WK.FAM.API/api/Assets/Create" methodName="Create" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create - CreateAsset" id="b9d829bd-17c3-4046-85f2-08632b30a3e6" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.110.2.121</con:endpoint><con:request>[{"Assets": [
+      {
+      "entity": "EntityABC",
+      "assetID": "A001",
+      "description": "PURCHASE LAND 1",
+      "dateAcquired": "2/2/2015",
+      "originalCost": "60,000.00",
+      "assetType": "Agriculture equipment"
+   },
+      {
+      "entity": "EntityABC",
+      "assetID": "A002",
+      "description": "PURCHASE LAND 2",
+      "dateAcquired": "1/1/2015",
+      "originalCost": "20,000.00",
+      "assetType": "Automobiles"
+   },
+      {
+      "entity": "EntityABC",
+      "assetID": "A003",
+      "description": "PURCHASE LAND 3",
+      "dateAcquired": "2/12/2015",
+      "originalCost": "80,000.00",
+      "assetType": "Cellular phones"
+   },
+      {
+      "entity": "Entity A",
+      "assetID": "A004",
+      "description": "PURCHASE LAND 4",
+      "dateAcquired": "1/12/2015",
+      "originalCost": "160,000.00",
+      "assetType": "Cellular phones (Non-listed)"
+   },
+      {
+      "entity": "Entity A",
+      "assetID": "A005",
+      "description": "PURCHASE LAND 5",
+      "dateAcquired": "3/3/2015",
+      "originalCost": "30,000.00",
+      "assetType": "Commercial Property"
+   },
+      {
+      "entity": "Entity A",
+      "assetID": "A006",
+      "description": "PURCHASE LAND 6",
+      "dateAcquired": "4/5/2015",
+      "originalCost": "40,000.00",
+      "assetType": "Computer Software (post 8/10/93)"
+   },
+      {
+      "entity": "Entity A",
+      "assetID": "A007",
+      "description": "PURCHASE LAND 7",
+      "dateAcquired": "1/2/2015",
+      "originalCost": "50,000.00",
+      "assetType": "Construction Equipment"
+   },
+      {
+      "entity": "Entity A",
+      "assetID": "A008",
+      "description": "PURCHASE LAND 8",
+      "dateAcquired": "1/1/2015",
+      "originalCost": "80,000.00",
+      "assetType": "Information systems, computers"
+   },
+      {
+      "entity": "Entity A",
+      "assetID": "A009",
+      "description": "PURCHASE LAND 9",
+      "dateAcquired": "5/5/2015",
+      "originalCost": "90,000.00",
+      "assetType": "Land"
+   },
+      {
+      "entity": "Entity A",
+      "assetID": "A010",
+      "description": "PURCHASE LAND 10",
+      "dateAcquired": "10/2/2015",
+      "originalCost": "55,000.00",
+      "assetType": "Land improvements"
+   }
+]}]</con:request><con:originalUri>http://10.110.2.121/WK.FAM.API/api/Assets/Create</con:originalUri><con:assertion type="XPath Match" id="fa672b7e-8f2d-43fd-bfaa-8c699445b3b5" name="Success Message"><con:configuration><path>declare namespace ns1='http://10.110.2.121/WK.FAM.API/api/Assets/Create';
+//ns1:Response[1]/ns1:Message[1]</path><content>Asset(s) created successfully</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry/></con:parameterOrder></con:restRequest></con:config></con:testStep><con:setupScript>
+</con:setupScript><con:properties/><con:reportParameters/></con:testCase>
